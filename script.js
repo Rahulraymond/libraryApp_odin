@@ -1,4 +1,4 @@
-const myLibrary = [];
+const myLibrary = [{}];
 
 function Book(title, author, pages, isRead) {
   this.title = title;
@@ -56,6 +56,11 @@ document.getElementById("newBookForm").addEventListener("submit", (event) => {
   if (title && author && pages) {
     const newBook = new Book(title, author, pages, isRead);
     addBookToLibrary(newBook);
+
+    // Reset form fields
+    document.getElementById("newBookForm").reset();
+
+    // Hide the form
     document.getElementById("formPopup").style.display = "none";
   } else {
     alert("Please fill in all required fields.");
