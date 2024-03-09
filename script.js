@@ -1,4 +1,4 @@
-const myLibrary = [{}];
+const myLibrary = [];
 
 function Book(title, author, pages, isRead) {
   this.title = title;
